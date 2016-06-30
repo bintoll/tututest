@@ -11,8 +11,6 @@
 
 @interface OtprStatTableTableViewController ()
 
-@property (nonatomic, strong) NSArray *values;
-
 @end
 
 @implementation OtprStatTableTableViewController{
@@ -20,12 +18,10 @@
 }
 @synthesize citys;
 @synthesize filteredItems;
-@synthesize displayedItems;
 @synthesize searchController;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    searchString = @"app";
     self.citys = [[NSMutableArray alloc] init];
     [self.citys addObject:@"Apples"];
     [self.citys addObject:@"Oranges"];
@@ -44,12 +40,12 @@
     [self.citys addObject:@"Blueberries"];
     [self.citys addObject:@"Raspberries"];
     self.filteredItems = [[NSMutableArray alloc] init];
-    self.displayedItems = self.citys;
-    searchController.searchBar.text = searchString;
+    [self.filteredItems addObjectsFromArray:citys];
     
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.searchBar.delegate = self;
+    self.searchController.dimsBackgroundDuringPresentation = false;
     
     [self.searchController.searchBar sizeToFit];
     
@@ -73,25 +69,34 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Incomplete implementation, return the number of sections
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete implementation, return the number of rows
-    return [self.displayedItems count];
+    if (self.searchController.active) {
+        return self.filteredItems.count;
+    }
+    else {
+        return self.citys.count;
+    }
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomCell *cell = (CustomCell *)[tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] init];
-    }
-    // Configure the cell...
-    cell.NameLabel.text = [self.displayedItems objectAtIndex:indexPath.row];
 
-    return cell;
+    // Configure the cell...
+    if (self.searchController.active) {
+        cell.NameLabel.text = [self.filteredItems objectAtIndex:indexPath.row];
+        
+        return cell;
+    }
+    else {
+        cell.NameLabel.text = [self.citys objectAtIndex:indexPath.row];
+        
+        return cell;
+    }
+
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -102,31 +107,20 @@
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)SearchController {
     NSLog(@"updateSearchResultsForSearchController");
-    NSLog(@"searchString=%@", searchString);
-    if ([searchString  isEqual: @""]) {
-        searchString = SearchController.searchBar.text;
-    }
-    NSLog(@"searchString=%@", searchString);
-    
-    // Check if the user cancelled or deleted the search term so we can display the full list instead.
-    if (![searchString isEqualToString:@""]) {
+    if (![searchController.searchBar.text isEqualToString:@""]) {
         [self.filteredItems removeAllObjects];
-        for (NSString *str in self.citys) {
-            if ([searchString isEqualToString:@""] || [str localizedCaseInsensitiveContainsString:searchString] == YES) {
-                NSLog(@"str=%@", str);
-                [self.filteredItems addObject:str];
-            }
-        }
-        self.displayedItems = self.filteredItems;
-    }
-    else {
-        self.displayedItems = self.citys;
+        NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", searchController.searchBar.text];
+        NSLog(@"%@", pred);
+        [self.filteredItems addObjectsFromArray:[self.citys filteredArrayUsingPredicate:pred]];
+        NSLog(@"%@", filteredItems);
     }
     [self.tableView reloadData];
-    
 }
 
-
+- (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    //_selectedCell = [aTableView cellForRowAtIndexPath:indexPath];
+    NSLog(@"%ld", (long)indexPath.row);
+}
 
 
 /*

@@ -12,7 +12,6 @@
 
 @property (nonatomic,strong) NSMutableArray *citys;
 @property (nonatomic, strong) NSMutableArray * filteredItems;
-@property (nonatomic, weak) NSArray * displayedItems;
 @property (nonatomic, strong) UISearchController * searchController;
 
 
