@@ -1,6 +1,0 @@
-file=/Users/kir/documents/tutu/tutu/Pods/BuildHeaders/SBJson/SBJson.h
-if [[ ! -e $file &&  -L $file ]]; then
-  echo "$file symlink is  broken!"
-else
-  echo "symlink works"
-fi
