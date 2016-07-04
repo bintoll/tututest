@@ -8,95 +8,77 @@
 
 #import "OtprStatTableTableViewController.h"
 #import "CustomCell.h"
+#import "GetData.h"
+#import "FirstViewController.h"
 
 @interface OtprStatTableTableViewController ()
-
+@property (nonatomic, readonly) NSMutableArray *NazvStant;
+@property (nonatomic, readonly) NSMutableArray *SectionTitels;
 @end
 
 @implementation OtprStatTableTableViewController{
     NSString *searchString;
 }
-@synthesize citys;
+@synthesize NazvStant;
 @synthesize filteredItems;
 @synthesize searchController;
+@synthesize SectionTitels;
+
+- (NSMutableArray *) NazvStant {
+    if (!NazvStant)
+        NazvStant = [NSMutableArray new];
+    return NazvStant;
+}
+
+- (NSMutableArray *) SectionTitels {
+    if (!SectionTitels)
+        SectionTitels = [NSMutableArray new];
+    return SectionTitels;
+}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.citys = [[NSMutableArray alloc] init];
-    [self.citys addObject:@"Apples"];
-    [self.citys addObject:@"Oranges"];
-    [self.citys addObject:@"Pears"];
-    [self.citys addObject:@"Grapes"];
-    [self.citys addObject:@"Grapefruits"];
-    [self.citys addObject:@"Lemons"];
-    [self.citys addObject:@"Peaches"];
-    [self.citys addObject:@"Pineapples"];
-    [self.citys addObject:@"Cherries"];
-    [self.citys addObject:@"Bananas"];
-    [self.citys addObject:@"Watermelons"];
-    [self.citys addObject:@"Cantaloupes"];
-    [self.citys addObject:@"Limes"];
-    [self.citys addObject:@"Strawberries"];
-    [self.citys addObject:@"Blueberries"];
-    [self.citys addObject:@"Raspberries"];
     self.filteredItems = [[NSMutableArray alloc] init];
-    [self.filteredItems addObjectsFromArray:citys];
-    
+    for (id cityName in [[cashe objectForKey:@"request"] objectForKey:@"citiesFrom"]) {
+        for (id station in [cityName objectForKey:@"stations"]) {
+            [self.NazvStant addObject:[station objectForKey:@"stationTitle"]];
+        }
+        [self.filteredItems addObject:cityName];
+    }
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
     self.searchController.searchBar.delegate = self;
     self.searchController.dimsBackgroundDuringPresentation = false;
-    
     [self.searchController.searchBar sizeToFit];
-    
-    // Add the UISearchBar to the top header of the table view
     self.tableView.tableHeaderView = self.searchController.searchBar;
-    
-    // Hides search bar initially.  When the user pulls down on the list, the search bar is revealed.
     [self.tableView setContentOffset:CGPointMake(0, self.searchController.searchBar.frame.size.height)];
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
-}
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
-
-#pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 1;
+    return [filteredItems count];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (self.searchController.active) {
-        return self.filteredItems.count;
-    }
-    else {
-        return self.citys.count;
-    }
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    NSString *str = [NSString stringWithFormat:@"%@, %@", [[filteredItems objectAtIndex:section] objectForKey:@"countryTitle"], [[filteredItems objectAtIndex:section] objectForKey:@"cityTitle"]];
+    return str;
 }
 
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return [[[filteredItems objectAtIndex:section] objectForKey:@"stations"] count];
+}
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     CustomCell *cell = (CustomCell *)[tableView dequeueReusableCellWithIdentifier:@"CustomCell" forIndexPath:indexPath];
-
-    // Configure the cell...
-    if (self.searchController.active) {
-        cell.NameLabel.text = [self.filteredItems objectAtIndex:indexPath.row];
-        
-        return cell;
-    }
-    else {
-        cell.NameLabel.text = [self.citys objectAtIndex:indexPath.row];
-        
-        return cell;
-    }
-
+    cell.NameLabel.text = [[[[filteredItems objectAtIndex:indexPath.section] objectForKey:@"stations"] objectAtIndex:indexPath.row] objectForKey:@"stationTitle"];
+    return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -106,20 +88,25 @@
 }
 
 - (void)updateSearchResultsForSearchController:(UISearchController *)SearchController {
-    NSLog(@"updateSearchResultsForSearchController");
     if (![searchController.searchBar.text isEqualToString:@""]) {
         [self.filteredItems removeAllObjects];
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", searchController.searchBar.text];
-        NSLog(@"%@", pred);
-        [self.filteredItems addObjectsFromArray:[self.citys filteredArrayUsingPredicate:pred]];
-        NSLog(@"%@", filteredItems);
+        NSMutableArray *filteredstat = [NSMutableArray new];
+        [filteredstat addObjectsFromArray:[NazvStant filteredArrayUsingPredicate:pred]];
+        for (id cityName in [[cashe objectForKey:@"request"] objectForKey:@"citiesFrom"]) {
+            for (id station in [cityName objectForKey:@"stations"]) {
+                if ([filteredstat containsObject:[NSString stringWithFormat:@"%@", [station objectForKey:@"stationTitle"]]]) {
+                    [self.filteredItems addObject:cityName];
+                }
+            }
+        }
     }
     [self.tableView reloadData];
 }
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    //_selectedCell = [aTableView cellForRowAtIndexPath:indexPath];
-    NSLog(@"%ld", (long)indexPath.row);
+    CityOtpr = [[[[filteredItems objectAtIndex:indexPath.section] objectForKey:@"stations"] objectAtIndex:indexPath.row] objectForKey:@"stationId"];
+    [self performSegueWithIdentifier:@"GoToDetailsOtpr" sender:self];
 }
 
 

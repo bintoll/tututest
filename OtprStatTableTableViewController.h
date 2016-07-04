@@ -10,7 +10,7 @@
 
 @interface OtprStatTableTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating>
 
-@property (nonatomic,strong) NSMutableArray *citys;
+
 @property (nonatomic, strong) NSMutableArray * filteredItems;
 @property (nonatomic, strong) UISearchController * searchController;
 

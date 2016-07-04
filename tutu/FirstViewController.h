@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "SBJson4.h"
+
 
 @interface FirstViewController : UIViewController
-
-
+@property (weak, nonatomic) IBOutlet UIButton *ViborOut1;
+@property (weak, nonatomic) IBOutlet UIButton *ViborOut2;
+extern NSString *CityOtpr;
+extern NSString *CityPrib;
+extern NSString *Vremy;
 @end
 

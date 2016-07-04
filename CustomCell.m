@@ -7,11 +7,14 @@
 //
 
 #import "CustomCell.h"
+#import "GetData.h"
 
 @implementation CustomCell
 @synthesize NameLabel = _NameLabel;
+
 - (void)awakeFromNib {
     [super awakeFromNib];
+    self.NameLabel = (UILabel *)[self viewWithTag:0];
     // Initialization code
 }
 

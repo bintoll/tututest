@@ -8,18 +8,18 @@ target 'tutu' do
   # use_frameworks!
 
   # Pods for tutu
-pod 'SBJson', '~> 4.0.0'
+pod 'TouchJSON', '1.1'
 
   target 'tutuTests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SBJson', '~> 4.0.0'
+    pod 'TouchJSON', '1.1'
   end
 
   target 'tutuUITests' do
     inherit! :search_paths
     # Pods for testing
-    pod 'SBJson', '~> 4.0.0'
+    pod 'TouchJSON', '1.1'
   end
 
 end

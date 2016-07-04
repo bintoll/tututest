@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
@@ -28,18 +27,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Sde-LM-fNg" id="Nl5-RP-gRo">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XZ0-tV-elM">
-                                            <rect key="frame" x="101" y="29" width="69" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="NameLabel" destination="XZ0-tV-elM" id="UKg-6T-BO0"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -50,6 +38,7 @@
                     <navigationItem key="navigationItem" title="Выберете станцию отправления" id="L5p-1b-fwh"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="qgz-Os-m4K" id="EDP-lC-seo"/>
+                        <segue destination="H1n-tk-h0U" kind="show" identifier="GoToDetailsOtpr" id="15d-m9-nfW"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="68b-Vz-Gj6" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -64,6 +53,24 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1855.5" y="-749.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="PNX-ap-YTF">
+            <objects>
+                <viewController id="H1n-tk-h0U" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="moJ-m0-AYX"/>
+                        <viewControllerLayoutGuide type="bottom" id="IjE-h1-mtm"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u8O-h2-HyS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eQp-2X-aOT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455.5" y="-749.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="y4K-XW-qNV">
@@ -112,6 +119,10 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Расписание" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="ViborOut1" destination="Ig5-px-Qej" id="YQe-DL-0be"/>
+                        <outlet property="ViborOut2" destination="1mG-61-JWY" id="vat-Sq-NUc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
@@ -157,10 +168,10 @@
             </objects>
             <point key="canvasLocation" x="741.5" y="411.5"/>
         </scene>
-        <!--ВЫберите станцию прибытия-->
+        <!--Выберите станцию прибытия-->
         <scene sceneID="Kzf-zQ-Qsv">
             <objects>
-                <tableViewController id="2TE-8L-JNU" sceneMemberID="viewController">
+                <tableViewController id="2TE-8L-JNU" customClass="PribStatTableTableViewController" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="2uQ-1G-oD6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -174,11 +185,11 @@
                             </connections>
                         </searchBar>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mTL-Kh-TOW">
-                                <rect key="frame" x="0.0" y="136" width="375" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" indentationWidth="10" reuseIdentifier="CustomCell" rowHeight="80" id="mTL-Kh-TOW" customClass="CustomCell">
+                                <rect key="frame" x="0.0" y="136" width="375" height="80"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mTL-Kh-TOW" id="eWa-t5-Eoz">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="79"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -188,9 +199,10 @@
                             <outlet property="delegate" destination="2TE-8L-JNU" id="B5Q-Sw-0LE"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ВЫберите станцию прибытия" id="oAO-ew-l5d"/>
+                    <navigationItem key="navigationItem" title="Выберите станцию прибытия" id="oAO-ew-l5d"/>
                     <connections>
                         <outlet property="searchDisplayController" destination="shc-eo-TiR" id="fg3-p1-GaT"/>
+                        <segue destination="b31-OG-bC3" kind="show" identifier="GoToDetailsPrib" id="Wky-j4-oqE"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lwI-um-Oqi" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -205,6 +217,24 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1855.5" y="19.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Jyd-W5-Oni">
+            <objects>
+                <viewController id="b31-OG-bC3" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ns2-TP-VBd"/>
+                        <viewControllerLayoutGuide type="bottom" id="dmy-Sg-lrh"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Qjw-78-npz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lSh-Zq-qyx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2455.5" y="19.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ACt-Nb-YUc">

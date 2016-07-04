@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3CCF39FD8DF69335C29EE639 /* libPods-tutu.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BEA1032B6420665C0EF223D7 /* libPods-tutu.a */; };
+		4F2397741D2A5FDB00F01ACD /* GetData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F2397731D2A5FDB00F01ACD /* GetData.m */; };
 		4F7C018A1D228AD40086C95B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C01891D228AD40086C95B /* main.m */; };
 		4F7C018D1D228AD40086C95B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C018C1D228AD40086C95B /* AppDelegate.m */; };
 		4F7C01901D228AD40086C95B /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C018F1D228AD40086C95B /* FirstViewController.m */; };
@@ -17,7 +19,10 @@
 		4F7C01A61D228AD50086C95B /* tutuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C01A51D228AD50086C95B /* tutuTests.m */; };
 		4F7C01B11D228AD50086C95B /* tutuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C01B01D228AD50086C95B /* tutuUITests.m */; };
 		4F7C01C61D22FE090086C95B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C01C51D22FE090086C95B /* CustomCell.m */; };
+		4FA5D23F1D2B1539008110D8 /* PribStatTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D23E1D2B1539008110D8 /* PribStatTableTableViewController.m */; };
 		4FF593201D230005004817CA /* OtprStatTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5931F1D230005004817CA /* OtprStatTableTableViewController.m */; };
+		7A194FFB8B58BA0D79D1040B /* libPods-tutuUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC488CFF87392A1D8EAE896 /* libPods-tutuUITests.a */; };
+		9A074DFB7AA09FFACD0793EA /* libPods-tutuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9341532FD05A6FAA90F6C1 /* libPods-tutuTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,8 @@
 		282810CAC0A41A3DBBDD5398 /* Pods-tutu.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutu.release.xcconfig"; path = "Pods/Target Support Files/Pods-tutu/Pods-tutu.release.xcconfig"; sourceTree = "<group>"; };
 		2FE977157C10C3D34C39DACA /* Pods-tutuUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutuUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tutuUITests/Pods-tutuUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		344B237CC13E7C24327AC3D6 /* Pods-tutuTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutuTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tutuTests/Pods-tutuTests.release.xcconfig"; sourceTree = "<group>"; };
+		4F2397721D2A5FDB00F01ACD /* GetData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GetData.h; sourceTree = "<group>"; };
+		4F2397731D2A5FDB00F01ACD /* GetData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GetData.m; sourceTree = "<group>"; };
 		4F7C01851D228AD40086C95B /* tutu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tutu.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F7C01891D228AD40086C95B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		4F7C018B1D228AD40086C95B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -61,9 +68,14 @@
 		4F7C01B21D228AD50086C95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F7C01C41D22FE090086C95B /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCell.h; path = ../CustomCell.h; sourceTree = "<group>"; };
 		4F7C01C51D22FE090086C95B /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCell.m; path = ../CustomCell.m; sourceTree = "<group>"; };
+		4FA5D23D1D2B1539008110D8 /* PribStatTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PribStatTableTableViewController.h; sourceTree = "<group>"; };
+		4FA5D23E1D2B1539008110D8 /* PribStatTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PribStatTableTableViewController.m; sourceTree = "<group>"; };
 		4FF5931E1D230005004817CA /* OtprStatTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OtprStatTableTableViewController.h; path = ../OtprStatTableTableViewController.h; sourceTree = "<group>"; };
 		4FF5931F1D230005004817CA /* OtprStatTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OtprStatTableTableViewController.m; path = ../OtprStatTableTableViewController.m; sourceTree = "<group>"; };
+		6F9341532FD05A6FAA90F6C1 /* libPods-tutuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tutuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BEA1032B6420665C0EF223D7 /* libPods-tutu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tutu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F92281FF12B6BFB5D0A032 /* Pods-tutuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tutuTests/Pods-tutuTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CDC488CFF87392A1D8EAE896 /* libPods-tutuUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tutuUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D66251D49E16795E5CAED589 /* Pods-tutuUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutuUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-tutuUITests/Pods-tutuUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E28DADD59C9D49682B20AEB7 /* Pods-tutu.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutu.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tutu/Pods-tutu.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -73,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3CCF39FD8DF69335C29EE639 /* libPods-tutu.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9A074DFB7AA09FFACD0793EA /* libPods-tutuTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -87,6 +101,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A194FFB8B58BA0D79D1040B /* libPods-tutuUITests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -126,8 +141,12 @@
 				4F7C01921D228AD40086C95B /* SecondViewController.m */,
 				4FF5931E1D230005004817CA /* OtprStatTableTableViewController.h */,
 				4FF5931F1D230005004817CA /* OtprStatTableTableViewController.m */,
+				4FA5D23D1D2B1539008110D8 /* PribStatTableTableViewController.h */,
+				4FA5D23E1D2B1539008110D8 /* PribStatTableTableViewController.m */,
 				4F7C01C41D22FE090086C95B /* CustomCell.h */,
 				4F7C01C51D22FE090086C95B /* CustomCell.m */,
+				4F2397721D2A5FDB00F01ACD /* GetData.h */,
+				4F2397731D2A5FDB00F01ACD /* GetData.m */,
 				4F7C01941D228AD40086C95B /* Main.storyboard */,
 				4F7C01971D228AD50086C95B /* Assets.xcassets */,
 				4F7C01991D228AD50086C95B /* LaunchScreen.storyboard */,
@@ -179,6 +198,9 @@
 		99275D883CF4683CB121C4F7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BEA1032B6420665C0EF223D7 /* libPods-tutu.a */,
+				6F9341532FD05A6FAA90F6C1 /* libPods-tutuTests.a */,
+				CDC488CFF87392A1D8EAE896 /* libPods-tutuUITests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -190,12 +212,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F7C01B51D228AD50086C95B /* Build configuration list for PBXNativeTarget "tutu" */;
 			buildPhases = (
+				C790E5D7FE7BD20E8F7F439E /* [CP] Check Pods Manifest.lock */,
 				6DD2387A0C99711B947A325F /* [CP] Check Pods Manifest.lock */,
 				4F7C01811D228AD40086C95B /* Sources */,
 				4F7C01821D228AD40086C95B /* Frameworks */,
 				4F7C01831D228AD40086C95B /* Resources */,
 				CF543ED7D1048456922D9494 /* [CP] Embed Pods Frameworks */,
 				0EFB5725F515F63A1A5985CD /* [CP] Copy Pods Resources */,
+				1A7AA6D9CF423AEEEE5B3E19 /* 📦 Embed Pods Frameworks */,
+				0309F10B3DD279979756A259 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -210,12 +235,15 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F7C01B81D228AD50086C95B /* Build configuration list for PBXNativeTarget "tutuTests" */;
 			buildPhases = (
+				3ADC91F57094FFA498CF9E8B /* [CP] Check Pods Manifest.lock */,
 				F936A7D209BDD3E7C716A589 /* [CP] Check Pods Manifest.lock */,
 				4F7C019D1D228AD50086C95B /* Sources */,
 				4F7C019E1D228AD50086C95B /* Frameworks */,
 				4F7C019F1D228AD50086C95B /* Resources */,
 				20DCBDCAC87D0A3DFE1D21C2 /* [CP] Embed Pods Frameworks */,
 				74F141E4B1A616C30E3909E3 /* [CP] Copy Pods Resources */,
+				4436DF683F63FFA77939AE83 /* 📦 Embed Pods Frameworks */,
+				551ADACA4186E452153DCBC6 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -231,11 +259,13 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4F7C01BB1D228AD50086C95B /* Build configuration list for PBXNativeTarget "tutuUITests" */;
 			buildPhases = (
+				EF611355CF346AF5BA66C6A7 /* [CP] Check Pods Manifest.lock */,
 				55048E9E0C15DB6130A93C4E /* [CP] Check Pods Manifest.lock */,
 				4F7C01A81D228AD50086C95B /* Sources */,
 				4F7C01A91D228AD50086C95B /* Frameworks */,
 				4F7C01AA1D228AD50086C95B /* Resources */,
 				F3501F84412B7A8E72822782 /* [CP] Copy Pods Resources */,
+				DAE1A64B57CBDDD97FAD5051 /* 📦 Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -318,6 +348,21 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		0309F10B3DD279979756A259 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutu/Pods-tutu-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		0EFB5725F515F63A1A5985CD /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -333,6 +378,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutu/Pods-tutu-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		1A7AA6D9CF423AEEEE5B3E19 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutu/Pods-tutu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		20DCBDCAC87D0A3DFE1D21C2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -341,6 +401,36 @@
 			inputPaths = (
 			);
 			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutuTests/Pods-tutuTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3ADC91F57094FFA498CF9E8B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4436DF683F63FFA77939AE83 /* 📦 Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Embed Pods Frameworks";
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -361,6 +451,21 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		551ADACA4186E452153DCBC6 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutuTests/Pods-tutuTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		6DD2387A0C99711B947A325F /* [CP] Check Pods Manifest.lock */ = {
@@ -393,6 +498,21 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutuTests/Pods-tutuTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		C790E5D7FE7BD20E8F7F439E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
 		CF543ED7D1048456922D9494 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -406,6 +526,36 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutu/Pods-tutu-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAE1A64B57CBDDD97FAD5051 /* 📦 Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "📦 Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-tutuUITests/Pods-tutuUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EF611355CF346AF5BA66C6A7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		F3501F84412B7A8E72822782 /* [CP] Copy Pods Resources */ = {
@@ -445,6 +595,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F2397741D2A5FDB00F01ACD /* GetData.m in Sources */,
+				4FA5D23F1D2B1539008110D8 /* PribStatTableTableViewController.m in Sources */,
 				4F7C01931D228AD40086C95B /* SecondViewController.m in Sources */,
 				4FF593201D230005004817CA /* OtprStatTableTableViewController.m in Sources */,
 				4F7C018D1D228AD40086C95B /* AppDelegate.m in Sources */,
@@ -507,6 +659,7 @@
 /* Begin XCBuildConfiguration section */
 		4F7C01B31D228AD50086C95B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E28DADD59C9D49682B20AEB7 /* Pods-tutu.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -545,19 +698,20 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/SBJson\"",
 					"\"${PODS_ROOT}/BuildHeaders\"",
 					"\"$(SRCROOT)/Pods/Headers/\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 			};
 			name = Debug;
 		};
 		4F7C01B41D228AD50086C95B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 282810CAC0A41A3DBBDD5398 /* Pods-tutu.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -590,12 +744,12 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"${PODS_ROOT}/Headers/Public\"",
-					"\"${PODS_ROOT}/Headers/Public/SBJson\"",
 					"\"${PODS_ROOT}/BuildHeaders\"",
 					"\"$(SRCROOT)/Pods/Headers/\"",
 				);
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "$(inherited)";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -609,13 +763,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tutu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = noname.tutu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -632,13 +786,13 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = tutu/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				LINK_WITH_STANDARD_LIBRARIES = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_LDFLAGS = "";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = noname.tutu;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
@@ -654,6 +808,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = tutuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = noname.tutuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tutu.app/tutu";
@@ -667,6 +822,7 @@
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = tutuTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = noname.tutuTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tutu.app/tutu";
@@ -679,6 +835,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = tutuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = noname.tutuUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = tutu;
@@ -691,6 +848,7 @@
 			buildSettings = {
 				INFOPLIST_FILE = tutuUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "$(inherited)";
 				PRODUCT_BUNDLE_IDENTIFIER = noname.tutuUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_TARGET_NAME = tutu;

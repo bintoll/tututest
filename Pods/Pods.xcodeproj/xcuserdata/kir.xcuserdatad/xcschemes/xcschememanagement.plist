@@ -19,13 +19,34 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>SBJson.xcscheme</key>
+		<key>TouchJSON.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
-	<dict/>
+	<dict>
+		<key>3C0939EF1BACF313ED8DDE71E50824E9</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>617BE4F63B0A5EF4E96BE93C16E2CD9B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7C00AB5E64B8D592939E53AEEF2CF21B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>ACAE234F983553ABBC2D8D42694D281F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+	</dict>
 </dict>
 </plist>
