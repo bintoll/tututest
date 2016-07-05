@@ -22,18 +22,16 @@ NSCache *cashe;
 }
 
 -(void) getdata {
-    if (![self.cashe objectForKey:@"request"]) {
-        //Запрос для получения информации
-        NSMutableURLRequest *request = [NSMutableURLRequest new];
-        [request setURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/tutu-ru/hire_ios-test/master/allStations.json"]];
-        [request setHTTPMethod:@"GET"];
-        NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
-        [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-            NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-            [self.cashe setObject:requestReply forKey:@"request"];
-            [[NSNotificationCenter defaultCenter] postNotificationName:@"GetDataProcessNotification" object:nil];
-        }] resume];
-    }
+    //Запрос для получения информации
+    NSMutableURLRequest *request = [NSMutableURLRequest new];
+    [request setURL:[NSURL URLWithString:@"https://raw.githubusercontent.com/tutu-ru/hire_ios-test/master/allStations.json"]];
+    [request setHTTPMethod:@"GET"];
+    NSURLSession *session = [NSURLSession sessionWithConfiguration:[NSURLSessionConfiguration defaultSessionConfiguration]];
+    [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+        NSString *requestReply = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+        [self.cashe setObject:requestReply forKey:@"request"];
+        [[NSNotificationCenter defaultCenter] postNotificationName:@"GetDataProcessNotification" object:nil];
+    }] resume];
 }
 
 -(void) parsedata {

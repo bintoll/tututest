@@ -19,8 +19,13 @@
 		4F7C01A61D228AD50086C95B /* tutuTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C01A51D228AD50086C95B /* tutuTests.m */; };
 		4F7C01B11D228AD50086C95B /* tutuUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C01B01D228AD50086C95B /* tutuUITests.m */; };
 		4F7C01C61D22FE090086C95B /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F7C01C51D22FE090086C95B /* CustomCell.m */; };
-		4FA5D23F1D2B1539008110D8 /* PribStatTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D23E1D2B1539008110D8 /* PribStatTableTableViewController.m */; };
-		4FF593201D230005004817CA /* OtprStatTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5931F1D230005004817CA /* OtprStatTableTableViewController.m */; };
+		4FA5D2471D2B320F008110D8 /* DetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D2461D2B320F008110D8 /* DetailInfoViewController.m */; };
+		4FA5D2481D2B320F008110D8 /* DetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D2461D2B320F008110D8 /* DetailInfoViewController.m */; };
+		4FA5D2491D2B320F008110D8 /* DetailInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D2461D2B320F008110D8 /* DetailInfoViewController.m */; };
+		4FA5D24C1D2BD6BB008110D8 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D24B1D2BD6BB008110D8 /* DateViewController.m */; };
+		4FA5D24D1D2BD6BB008110D8 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D24B1D2BD6BB008110D8 /* DateViewController.m */; };
+		4FA5D24E1D2BD6BB008110D8 /* DateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FA5D24B1D2BD6BB008110D8 /* DateViewController.m */; };
+		4FF593201D230005004817CA /* StatTableTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4FF5931F1D230005004817CA /* StatTableTableViewController.m */; };
 		7A194FFB8B58BA0D79D1040B /* libPods-tutuUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CDC488CFF87392A1D8EAE896 /* libPods-tutuUITests.a */; };
 		9A074DFB7AA09FFACD0793EA /* libPods-tutuTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F9341532FD05A6FAA90F6C1 /* libPods-tutuTests.a */; };
 /* End PBXBuildFile section */
@@ -68,10 +73,12 @@
 		4F7C01B21D228AD50086C95B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F7C01C41D22FE090086C95B /* CustomCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomCell.h; path = ../CustomCell.h; sourceTree = "<group>"; };
 		4F7C01C51D22FE090086C95B /* CustomCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomCell.m; path = ../CustomCell.m; sourceTree = "<group>"; };
-		4FA5D23D1D2B1539008110D8 /* PribStatTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PribStatTableTableViewController.h; sourceTree = "<group>"; };
-		4FA5D23E1D2B1539008110D8 /* PribStatTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PribStatTableTableViewController.m; sourceTree = "<group>"; };
-		4FF5931E1D230005004817CA /* OtprStatTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = OtprStatTableTableViewController.h; path = ../OtprStatTableTableViewController.h; sourceTree = "<group>"; };
-		4FF5931F1D230005004817CA /* OtprStatTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = OtprStatTableTableViewController.m; path = ../OtprStatTableTableViewController.m; sourceTree = "<group>"; };
+		4FA5D2451D2B320F008110D8 /* DetailInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailInfoViewController.h; sourceTree = "<group>"; };
+		4FA5D2461D2B320F008110D8 /* DetailInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailInfoViewController.m; sourceTree = "<group>"; };
+		4FA5D24A1D2BD6BB008110D8 /* DateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateViewController.h; sourceTree = "<group>"; };
+		4FA5D24B1D2BD6BB008110D8 /* DateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateViewController.m; sourceTree = "<group>"; };
+		4FF5931E1D230005004817CA /* StatTableTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = StatTableTableViewController.h; path = ../StatTableTableViewController.h; sourceTree = "<group>"; };
+		4FF5931F1D230005004817CA /* StatTableTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = StatTableTableViewController.m; path = ../StatTableTableViewController.m; sourceTree = "<group>"; };
 		6F9341532FD05A6FAA90F6C1 /* libPods-tutuTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tutuTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA1032B6420665C0EF223D7 /* libPods-tutu.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tutu.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4F92281FF12B6BFB5D0A032 /* Pods-tutuTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tutuTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-tutuTests/Pods-tutuTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -139,10 +146,12 @@
 				4F7C018F1D228AD40086C95B /* FirstViewController.m */,
 				4F7C01911D228AD40086C95B /* SecondViewController.h */,
 				4F7C01921D228AD40086C95B /* SecondViewController.m */,
-				4FF5931E1D230005004817CA /* OtprStatTableTableViewController.h */,
-				4FF5931F1D230005004817CA /* OtprStatTableTableViewController.m */,
-				4FA5D23D1D2B1539008110D8 /* PribStatTableTableViewController.h */,
-				4FA5D23E1D2B1539008110D8 /* PribStatTableTableViewController.m */,
+				4FF5931E1D230005004817CA /* StatTableTableViewController.h */,
+				4FF5931F1D230005004817CA /* StatTableTableViewController.m */,
+				4FA5D2451D2B320F008110D8 /* DetailInfoViewController.h */,
+				4FA5D2461D2B320F008110D8 /* DetailInfoViewController.m */,
+				4FA5D24A1D2BD6BB008110D8 /* DateViewController.h */,
+				4FA5D24B1D2BD6BB008110D8 /* DateViewController.m */,
 				4F7C01C41D22FE090086C95B /* CustomCell.h */,
 				4F7C01C51D22FE090086C95B /* CustomCell.m */,
 				4F2397721D2A5FDB00F01ACD /* GetData.h */,
@@ -596,9 +605,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F2397741D2A5FDB00F01ACD /* GetData.m in Sources */,
-				4FA5D23F1D2B1539008110D8 /* PribStatTableTableViewController.m in Sources */,
 				4F7C01931D228AD40086C95B /* SecondViewController.m in Sources */,
-				4FF593201D230005004817CA /* OtprStatTableTableViewController.m in Sources */,
+				4FF593201D230005004817CA /* StatTableTableViewController.m in Sources */,
+				4FA5D2471D2B320F008110D8 /* DetailInfoViewController.m in Sources */,
+				4FA5D24C1D2BD6BB008110D8 /* DateViewController.m in Sources */,
 				4F7C018D1D228AD40086C95B /* AppDelegate.m in Sources */,
 				4F7C01C61D22FE090086C95B /* CustomCell.m in Sources */,
 				4F7C01901D228AD40086C95B /* FirstViewController.m in Sources */,
@@ -611,6 +621,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7C01A61D228AD50086C95B /* tutuTests.m in Sources */,
+				4FA5D24D1D2BD6BB008110D8 /* DateViewController.m in Sources */,
+				4FA5D2481D2B320F008110D8 /* DetailInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -619,6 +631,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4F7C01B11D228AD50086C95B /* tutuUITests.m in Sources */,
+				4FA5D24E1D2BD6BB008110D8 /* DateViewController.m in Sources */,
+				4FA5D2491D2B320F008110D8 /* DetailInfoViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

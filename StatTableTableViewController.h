@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface OtprStatTableTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating>
+@interface StatTableTableViewController : UITableViewController <UITableViewDataSource, UITableViewDelegate, UISearchControllerDelegate, UISearchBarDelegate, UISearchResultsUpdating>
 
 
 @property (nonatomic, strong) NSMutableArray * filteredItems;

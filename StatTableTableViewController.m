@@ -6,23 +6,25 @@
 //  Copyright © 2016 Kirill Sapronov. All rights reserved.
 //
 
-#import "PribStatTableTableViewController.h"
+#import "StatTableTableViewController.h"
 #import "CustomCell.h"
 #import "GetData.h"
 #import "FirstViewController.h"
 
-@interface PribStatTableTableViewController ()
+@interface StatTableTableViewController ()
 @property (nonatomic, readonly) NSMutableArray *NazvStant;
 @property (nonatomic, readonly) NSMutableArray *SectionTitels;
+@property (nonatomic, readonly) NSString *titleViewController;
 @end
 
-@implementation PribStatTableTableViewController{
+@implementation StatTableTableViewController{
     NSString *searchString;
 }
 @synthesize NazvStant;
 @synthesize filteredItems;
 @synthesize searchController;
 @synthesize SectionTitels;
+@synthesize titleViewController;
 
 - (NSMutableArray *) NazvStant {
     if (!NazvStant)
@@ -36,14 +38,25 @@
     return SectionTitels;
 }
 
+- (NSString *) titleViewController {
+    if (!titleViewController)
+        titleViewController = [NSString new];
+    return titleViewController;
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.filteredItems = [[NSMutableArray alloc] init];
-    for (id cityName in [[cashe objectForKey:@"request"] objectForKey:@"citiesTo"]) {
+    if ([[NSString stringWithFormat:@"%@", self.title] isEqualToString:@"OtprStat"]) {
+        titleViewController = @"citiesFrom";
+    } else if ([[NSString stringWithFormat:@"%@", self.title] isEqualToString:@"PribStat"]) {
+        titleViewController = @"citiesTo";
+    }
+    filteredItems = [NSMutableArray new];
+    for (id cityName in [[cashe objectForKey:@"request"] objectForKey:titleViewController]) {
         for (id station in [cityName objectForKey:@"stations"]) {
             [self.NazvStant addObject:[station objectForKey:@"stationTitle"]];
         }
-        [self.filteredItems addObject:cityName];
+        [filteredItems addObject:cityName];
     }
     self.searchController = [[UISearchController alloc] initWithSearchResultsController:nil];
     self.searchController.searchResultsUpdater = self;
@@ -52,7 +65,7 @@
     [self.searchController.searchBar sizeToFit];
     self.tableView.tableHeaderView = self.searchController.searchBar;
     [self.tableView setContentOffset:CGPointMake(0, self.searchController.searchBar.frame.size.height)];
-}
+    }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -93,7 +106,7 @@
         NSPredicate *pred = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] %@", searchController.searchBar.text];
         NSMutableArray *filteredstat = [NSMutableArray new];
         [filteredstat addObjectsFromArray:[NazvStant filteredArrayUsingPredicate:pred]];
-        for (id cityName in [[cashe objectForKey:@"request"] objectForKey:@"citiesTo"]) {
+        for (id cityName in [[cashe objectForKey:@"request"] objectForKey:titleViewController]) {
             for (id station in [cityName objectForKey:@"stations"]) {
                 if ([filteredstat containsObject:[NSString stringWithFormat:@"%@", [station objectForKey:@"stationTitle"]]]) {
                     [self.filteredItems addObject:cityName];
@@ -105,53 +118,11 @@
 }
 
 - (void)tableView:(UITableView *)aTableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    CityPrib = [[[[filteredItems objectAtIndex:indexPath.section] objectForKey:@"stations"] objectAtIndex:indexPath.row] objectForKey:@"stationId"];
-    [self performSegueWithIdentifier:@"GoToDetailsPrib" sender:self];
+    if ([[NSString stringWithFormat:@"%@", self.title] isEqualToString:@"OtprStat"]) {
+        CityOtpr = [[[[filteredItems objectAtIndex:indexPath.section] objectForKey:@"stations"] objectAtIndex:indexPath.row] objectForKey:@"stationId"];
+    } else if ([[NSString stringWithFormat:@"%@", self.title] isEqualToString:@"PribStat"]) {
+        CityPrib = [[[[filteredItems objectAtIndex:indexPath.section] objectForKey:@"stations"] objectAtIndex:indexPath.row] objectForKey:@"stationId"];
+    }
+    [self performSegueWithIdentifier:@"GoToDetails" sender:self];
 }
-
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- } else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
-
 @end
